@@ -1,0 +1,43 @@
+:root{
+    --var1: #041b7b;
+    --var2: #340a6e;
+    --var3: #ff83c1;
+    --var4: #f4f2a8;
+    --var5: #f7a158;
+    --var6: #ecdcff;
+
+}
+h2, h3{
+    color: var(--var2);
+}
+h2{
+    width: 90%;
+    margin: auto;
+}
+p{
+    font-size: 1.2rem;
+}
+.features, .technologies{
+    width: 90%;
+    margin: auto;
+}
+
+.list{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+.list ul{
+    font-weight: normal;
+    margin-left: 1rem;
+}
+.list > li{
+    margin: 0.5rem auto;
+}
+li {
+    color: var(--var1);
+}
+.database{
+    width: 90%;
+    margin: auto;
+}

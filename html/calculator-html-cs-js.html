@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Calculator using HTML, CSS and Javascript</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="This post is about creating a simple calculator in HTML, CSS and Javascript.">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.svg">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- text highlighter -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/blog-common.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="left-brace"></div>
+            <div class="text">
+                <div class="code">Code</div>
+                <div class="in-a">
+                    <div></div>
+                    <div>in a</div>
+                    <div></div>
+                </div>
+                <div class="while">While</div>
+            </div>
+            <div class="right-brace"></div>
+        </div>
+    </header>
+    <main>
+        <section class="title">
+            <h1>Build Calculator using HTML, CSS and Javascript</h1>
+        </section>
+        <section class="content">
+            <div class="introduction">
+                Let's create a Calculator using HTML. Style with CSS and add functionality with Javascript. 
+            </div>
+            <section class="advertisement">
+                <h5>Advertisement</h5>
+                <div class="ad"></div>
+            </section>
+            <div class="video">
+                <p>Watch on YouTube</p>
+                <iframe src="https://www.youtube.com/embed/0l5HmRbGKyk?si=AztrpKbla2XHL_CC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                
+            </div>
+            <div class="file">
+                <h3 class="file-name">HTML</h3>
+                                    <pre class="file-content">
+                    <div class="copy">
+                        <span class="material-symbols-outlined">content_copy</span>
+                        <span>copy</span>
+                    </div>
+                        <code class="language-html">
+&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+    &lttitle&gtCalculator&lt/title&gt
+
+    &ltlink rel="stylesheet" href="/styles.css"&gt
+&lt/head&gt
+&ltbody&gt
+    &ltdiv class="container"&gt
+        &ltdiv class="display"&gt&lt/div&gt
+        &ltdiv class="numpad"&gt
+            &ltbutton class="btn num"&gt0&lt/button&gt
+            &ltbutton class="btn operator"&gt.&lt/button&gt
+            &ltbutton class="btn operator"&gt%&lt/button&gt
+            &ltbutton class="btn operator"&gt+&lt/button&gt
+            &ltbutton class="btn num"&gt1&lt/button&gt
+            &ltbutton class="btn num"&gt2&lt/button&gt
+            &ltbutton class="btn num"&gt3&lt/button&gt
+            &ltbutton class="btn operator"&gt-&lt/button&gt
+            &ltbutton class="btn num"&gt4&lt/button&gt
+            &ltbutton class="btn num"&gt5&lt/button&gt
+            &ltbutton class="btn num"&gt6&lt/button&gt
+            &ltbutton class="btn operator"&gt*&lt/button&gt
+            &ltbutton class="btn num"&gt7&lt/button&gt
+            &ltbutton class="btn num"&gt8&lt/button&gt
+            &ltbutton class="btn num"&gt9&lt/button&gt
+            &ltbutton class="btn operator"&gt/&lt/button&gt
+            &ltbutton class="btn del"&gtDel&lt/button&gt
+            &ltbutton class="btn clear"&gtCA&lt/button&gt
+            &ltbutton class="btn equal"&gt=&lt/button&gt
+        &lt/div&gt
+    &lt/div&gt
+&lt/body&gt
+&ltscript src="/script.js"&gt&lt/script&gt
+&lt/html&gt
+                        </code>
+                    </pre>
+            </div>
+            <div class="file">
+                <h3 class="file-name">CSS</h3>
+                <pre class="file-content">
+                    <div class="copy">
+                        <span class="material-symbols-outlined">content_copy</span>
+                        <span>copy</span>
+                    </div>
+                    <code class="language-css">
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 350px;
+    background-color: #e2c290;
+}
+.display{
+    height: 70px;
+    background-color: #4C3549;
+    margin: 60px 30px 30px 30px;
+    color: white;
+    font-size: 40px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    overflow-x: auto;
+}
+.numpad{
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(5, 60px);
+    gap: 15px;
+    justify-content: center;
+    margin: 40px 0px 60px 0;
+}
+.btn{
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 24px;
+}
+.num{
+    background-color: #1B4079;
+}
+.operator{
+    background-color: #301A4B;
+}
+.equal{
+    grid-column: 3/5;
+    grid-row: 5;
+    background-color: #018E42;
+    border-radius: 5px;
+}
+.clear, .del{
+    background-color: #FE5F55;
+}                        
+                    </code>
+                </pre>
+            </div>
+            <div class="file">
+                <h3 class="file-name">JavaScript</h3>
+                <pre class="file-content">
+                    <div class="copy">
+                        <span class="material-symbols-outlined">content_copy</span>
+                        <span>copy</span>
+                    </div>
+                    <code class="language-js">
+let btns = document.querySelectorAll('.btn');
+let display = document.getElementsByClassName("display")[0];
+
+btns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        if(btn.textContent == 'Del'){
+            // remove last character
+            display.textContent = display.textContent.slice(0, -1);
+        }
+        else if(btn.textContent == 'CA'){
+            // clear all content
+            display.textContent = '';
+        }
+        else if(btn.textContent == '='){
+            let result  = eval(display.textContent);
+            // if number is decimal then limit the result to 5 decimal places
+            display.textContent = Number.isInteger(result)?result:result.toFixed(5);
+        }
+        else{
+            // add the pressed button text to display
+            display.textContent += btn.textContent;
+        }
+    })
+})                        
+                    </code>
+                </pre>
+            </div>
+        </section>
+        <section class="advertisement">
+            <h5>Advertisement</h5>
+            <div class="ad"></div>
+        </section>
+        <section class="bottom-ad"></section>
+    </main>
+    <aside>
+    </aside>
+    <footer></footer>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="../js/blogScript.js"></script>
+</html>

@@ -1,0 +1,247 @@
+:root{
+    --var1: #041b7b;
+    --var2: #340a6e;
+    --var3: #ff83c1;
+    --var4: #f4f2a8;
+    --var5: #f7a158;
+    --var6: #ecdcff;
+
+}
+p{
+    color: var(--var1);
+}
+header{
+    background-color: var(--var2);
+}
+.title h1{
+    margin: 1rem auto;
+    color: var(--var2);
+    text-align: center;
+}
+.introduction{
+    font-size: 1.2rem;
+    width: 90%;
+    margin: auto;
+    color: var(--var1);
+}
+.video{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+.video p{
+    font-size: 1.2rem;
+    color: var(--var2);
+}
+.video iframe{
+    width: 300px;
+    height: 168.75px;
+    border-radius: 0.4rem;
+}
+.file{
+    width: 90%;
+    margin: 0rem auto;
+}
+.file .file-name{
+    color: var(--var2);
+}
+.file .file-desc{
+    color: var(--var2);
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+.file-content{
+    position: relative;
+}
+.file-content code{
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    overflow: auto;
+    max-height: 400px;
+}
+.file-content .copy{
+    position: absolute;
+    z-index: 2;
+    top: 1.6em;
+    right: 10px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #282c34;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.file-content .copy span:first-child{
+    font-size: 1.5rem;
+}
+.file-content code::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+.file-content code::-webkit-scrollbar-track {
+    background: var(--var6);
+}
+.file-content code::-webkit-scrollbar-thumb {
+    background: var(--var3);
+}
+.file-content code::-webkit-scrollbar-thumb:hover {
+    background: var(--var5);
+}
+.file-content .copy:hover{
+    color: var(--var3);
+    cursor: pointer;
+}
+body{
+    position: relative;
+}
+aside{
+    min-height: 200vh;
+    background-color: #ecdcff;
+    height: calc(100vh - 80px);
+    position: absolute;
+    top: 80px;
+    right: 0;
+    z-index: 3;
+    overflow: hidden;
+}
+.bottom-ad{
+    background-color: aquamarine;
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+}
+
+.content > p{
+    width: 90%;
+    font-size: 1.2rem;
+    color: var(--var1);
+    margin: 1rem auto;
+}
+.content > p img{
+    width: 100%;
+    margin-top: 1rem;
+    display: ruby-text;
+}
+
+
+@media(max-width: 425px){
+    .title h1{
+        width: 90%;
+    }
+    .video iframe{
+        width: 300px;
+        height: 168.75px;
+    }
+}
+@media(min-width: 425px){
+    .title h1{
+        width: 80%;
+    }
+    .video iframe{
+        width: 400px;
+        height: 236.25px;
+    }
+    .content > p img{
+        width: 60%;
+    }
+}
+@media(max-width: 768px){
+    aside{
+        display: none;
+    }
+    .bottom-ad{
+        display: none;
+    }
+}
+@media(min-width: 768px){
+    aside{
+        display: block;
+        width: 20%;
+    }
+    .bottom-ad{
+        display: block;
+        width: 80%;
+        min-height: 5rem;
+    }
+    main{
+        width: 80%;
+    }
+    .video iframe{
+        width: 500px;
+        height: 309.37px;
+    }
+    footer{
+        height: calc(3rem + 6rem);
+    }
+    .content > p img{
+        display: ruby-text;
+        width: 50%;
+    }
+}
+@media(min-width: 1024px){
+    aside{
+        display: block;
+        width: 17.5%;
+    }
+    .bottom-ad{
+        width: 82.5%;
+    }
+    main{
+        width: 82.5%;
+    }
+    .video iframe{
+        width: 644px;
+        height: 362.25px;
+    }
+    .file-content{
+        width: 90%;
+    }
+    .content > p img{
+        display: ruby-text;
+        width: 40%;
+    }
+}
+@media(min-width:1440px){
+    aside{
+        display: block;
+        width: 15%;
+    }
+    .bottom-ad{
+        width: 85%;
+        height: 6rem;
+    }
+    main{
+        width: 85%;
+    }
+    .video iframe{
+        width: 724px;
+        height: 407.25px;
+    }
+    .file-content{
+        width: 90%;
+    }
+    .content > p img{
+        display: ruby-text;
+        width: 30%;
+    }
+}
+@media(min-width: 2000px){
+    aside{
+        max-height: 150vh;
+        min-height: 150vh;
+    }
+}
+
+/**/
+main{
+    width: 100%;
+}
+aside{
+    display: none;
+}
+.bottom-ad{
+    display: none;
+}

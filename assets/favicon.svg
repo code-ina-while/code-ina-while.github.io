@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <g id="c" data-name="Layer 1">
+    <rect width="16" height="16" fill="#ce4912"/>
+    <polyline points="3.05 10.57 .5 8 3.05 5.43" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width=".1"/>
+    <polyline points="13 10.57 15.55 8 13 5.43" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width=".1"/>
+    <text transform="translate(4.58 6.04)" fill="#fff" font-family="TimesNewRomanPS-ItalicMT, &apos;Times New Roman&apos;" font-size="3" font-style="italic"><tspan x="0" y="0">CODE</tspan></text>
+    <text transform="translate(6.09 8.66)" fill="#231f20" font-family="TimesNewRomanPS-ItalicMT, &apos;Times New Roman&apos;" font-size="2.5" font-style="italic"><tspan x="0" y="0">in a</tspan></text>
+    <text transform="translate(4.16 11.62)" fill="#fff" font-family="TimesNewRomanPS-ItalicMT, &apos;Times New Roman&apos;" font-size="3" font-style="italic"><tspan x="0" y="0" letter-spacing="-.08em">W</tspan><tspan x="2.27" y="0">HILE</tspan></text>
+    <g>
+      <line x1="10.29" y1="7.83" x2="14.29" y2="7.83" fill="#fff" stroke="#231f20" stroke-miterlimit="10" stroke-width=".1"/>
+      <line x1="10.29" y1="8.17" x2="14.29" y2="8.17" fill="#fff" stroke="#231f20" stroke-miterlimit="10" stroke-width=".1"/>
+    </g>
+    <g>
+      <line x1="1.82" y1="7.83" x2="5.82" y2="7.83" fill="#fff" stroke="#231f20" stroke-miterlimit="10" stroke-width=".1"/>
+      <line x1="1.82" y1="8.17" x2="5.82" y2="8.17" fill="#fff" stroke="#231f20" stroke-miterlimit="10" stroke-width=".1"/>
+    </g>
+  </g>
+</svg>

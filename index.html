@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code in a While</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="This platform is for learning and polishing programming skills. It contains step by step project tutorials ranging from simple to complex.">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.svg">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/image-urls.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index-style.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="left-brace"></div>
+            <div class="text">
+                <div class="code">Code</div>
+                <div class="in-a">
+                    <div></div>
+                    <div>in a</div>
+                    <div></div>
+                </div>
+                <div class="while">While</div>
+            </div>
+            <div class="right-brace"></div>
+        </div>
+    </header>
+    <main>
+        <section class="hero-section">
+            <div class="bg"></div>
+            <div class="hero-content">
+                <h1>Welcome to Code in a While!</h1>
+                <p>Polish your programming skills with project tutorials ranging from simple to complex.</p>
+            </div>
+        </section>
+
+        <section class="latest-posts">
+            <h2>Latest Posts</h2>
+            <div class="latest-posts-container">
+                <div class="latest-posts-flex-box">
+                    <a href="../html/calculator-html-cs-js.html" class="latest-post">
+                        <div class="thumbnail lt1-img"></div>
+                        <div class="description">Create a calculator with HTML, CSS and JavaScript</div>
+                    </a>
+
+                    <a href="../html/lms-spring-boot.html" class="latest-post">
+                        <div class="thumbnail lt2-img"></div>
+                        <div class="description">Library Management System in Java Spring Boot and MySql</div>
+                    </a>
+
+                    <a href="../html/login-form-java-swing.html" class="latest-post">
+                        <div class="thumbnail  lt3-img"></div>
+                        <div class="description">Create a Login GUI in Java Swing</div>
+                    </a>
+
+                    <a href="../html/login-form-html-css.html" class="latest-post">
+                        <div class="thumbnail  lt4-img"></div>
+                        <div class="description">Create a simple Login Form with HTML and CSS</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="slider-btns">
+                <div class="slider-btn1"></div>
+                <div class="slider-btn2"></div>
+                <div class="slider-btn3"></div>
+                <div class="slider-btn4"></div>
+            </div>
+        </section>
+
+        <section class="advertisement">
+            <h5>Advertisement</h5>
+            <div class="ad"></div>
+        </section>
+        <section class="posts">
+            <h2>Posts</h2>
+            <div class="posts-grid">
+                <a href="../html/login-form-html-css.html" class="post">
+                    <div class="thumbnail post1-1-img"></div>
+                    <div class="description">Create a simple Login Form with HTML and CSS</div>
+                </a>
+
+                <a href="../html/calculator-html-cs-js.html" class="post">
+                    <div class="thumbnail  post1-2-img"></div>
+                    <div class="description">Create a calculator with HTML, CSS and JavaScript</div>
+                </a>
+
+                <a href="../html/login-form-java-swing.html" class="post">
+                    <div class="thumbnail  post1-3-img"></div>
+                    <div class="description">Create a Login GUI in Java Swing</div>
+                </a>
+
+                <a href="../html/lms-spring-boot.html" class="post">
+                    <div class="thumbnail  post1-4-img"></div>
+                    <div class="description">Library Management System in Java Spring Boot and MySql</div>
+                </a>
+
+            </div>
+
+            <div class="btns-panel">
+                <button id="prev">Prev</button>
+                <button id="next">Next</button>
+            </div>
+        </section>
+        <section class="advertisement">
+            <h5>Advertisement</h5>
+            <div class="ad">Lorem, ipsum.</div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+<script>
+    // ----------------handle next and prev btns---------------
+    let currentPage = 0;
+    let postsSection = document.querySelector('.posts');
+    let postsGrids = document.querySelectorAll('.posts-grid');
+
+    let prevPage = document.querySelector('#prev');
+    let nextPage = document.querySelector('#next');
+
+    nextPage.addEventListener('click', function(){
+        if(postsGrids.length != 1){
+            postsGrids[currentPage].style.display = 'none';
+            currentPage +=1 ;
+            postsGrids[currentPage].style.display = 'grid';
+
+            prevPage.disabled = false;
+            prevPage.style.opacity = 1;
+
+            if(currentPage == postsGrids.length - 1){
+                nextPage.disabled = true;
+                nextPage.style.opacity = '0.8';
+            }
+        }
+    })
+
+    prevPage.addEventListener('click', function(){
+        postsGrids[currentPage].style.display = 'none';
+
+        currentPage -= 1;
+
+        postsGrids[currentPage].style.display = 'grid';
+
+        if(currentPage == 0){
+            prevPage.disabled = true;
+            prevPage.style.opacity = 0.8;
+        }
+        if(currentPage == postsGrids.length - 2){
+            nextPage.disabled = false;
+            nextPage.style.opacity = 1;
+        }
+    })
+    // intialy disable the prev btn
+    prevPage.disabled = true;
+    prevPage.style.opacity = 0.8;
+
+    if(postsGrids.length == 1){
+        nextPage.disabled = true;
+        nextPage.style.opacity = 0.8;
+    }
+    // ---------------slider btns for latest posts---------------
+    let html = document.querySelector('html');
+    let sliderBtns = document.querySelector('.slider-btns');
+    let latestPostsFlexBox = document.querySelector('.latest-posts-flex-box');
+
+    Array.from(sliderBtns.children).forEach(sliderBtn => {
+        sliderBtn.addEventListener('click', function(){
+
+            let width = latestPostsFlexBox.children[0].scrollWidth + Number.parseFloat(getComputedStyle(html).fontSize);
+
+            Array.from(sliderBtns.children).forEach(b => {
+                b.style.backgroundColor = '#ff83c1';
+            })
+
+            sliderBtn.style.backgroundColor = '#340a6e';
+            if(sliderBtn.className.includes('slider-btn1')){
+                latestPostsFlexBox.style.transform = `translatex(calc(-0 * ${width}px))`;
+            }
+            else if(sliderBtn.className.includes('slider-btn2')){
+                latestPostsFlexBox.style.transform = `translatex(-${width}px)`;
+            }
+            else if(sliderBtn.className.includes('slider-btn3')){
+                latestPostsFlexBox.style.transform = `translateX(calc(-2 * ${width}px))`;
+            }
+            else if(sliderBtn.className.includes('slider-btn4')){
+                latestPostsFlexBox.style.transform = `translateX(calc(-3 * ${width}px))`;
+            }
+        })
+    })
+
+</script>
+</html>

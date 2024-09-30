@@ -1,0 +1,289 @@
+:root{
+    --var1: #041b7b;
+    --var2: #340a6e;
+    --var3: #ff83c1;
+    --var4: #f4f2a8;
+    --var5: #f7a158;
+    --var6: #ecdcff;
+
+}
+header{
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+}
+header img{
+    width: 142px;
+    height: 80px;
+}
+
+.hero-section{
+    background-image: url("../assets/hero-img.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bg{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+    background: rgb(58,8,121);
+    background: linear-gradient(-45deg, rgba(52,10,110,1) 0%, rgba(4,27,123,1) 100%);
+}
+.hero-content{
+    backdrop-filter: brightness(0.6);
+}
+.hero-content h1, .hero-content p{
+    color: white;
+    text-align: center;
+}
+.hero-content p{
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+.latest-posts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    max-width: 100%;
+}
+.latest-posts h2{
+    margin-bottom: 1rem;
+    overflow: hidden;
+    color: var(--var2);
+}
+.latest-posts-container{
+    width: 90%;
+    overflow: hidden;
+}
+.latest-posts-flex-box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: 1s ease-in-out;
+}
+.latest-post .thumbnail{
+    width: 100%;
+    padding-top: 56.25%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.4rem 0.4rem 0 0;
+}
+.latest-post .description{
+    text-align: center;
+    background-color: blueviolet;
+    font-size: 1rem;
+    width: 100%;
+    padding-top: 0.2rem;
+    background-color: var(--var2);
+    color: white;
+    border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.slider-btns{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+.slider-btn1, .slider-btn2, .slider-btn3, .slider-btn4{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--var3);
+}
+.posts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.posts-grid{
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+}
+.post{
+    width: 100%;
+}
+.latest-post:hover .description{
+    border: 1px solid var(--var2);
+    color: var(--var3);
+}
+.post .thumbnail{
+    width: 100%;
+    padding-top: 56.25%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.4rem 0.4rem 0 0;
+}
+.post .description{
+    text-align: center;
+    background-color: var(--var2);
+    color: white;
+    font-size: 1rem;
+    padding-top: 0.2rem;
+    width: 100%;
+    border-radius: 0 0 0.4rem 0.4rem;
+}
+.posts h2{
+    margin-bottom: 1rem;
+    color: var(--var2);
+}
+.post:hover .description{
+    border: 1px solid var(--var2);
+    color: var(--var3);
+}
+.btns-panel{
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+.btns-panel button{
+    width: 4rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    background-color: var(--var2);
+    color: white;
+    border-radius: 0.3rem 0 0.3rem 0;
+}
+.btns-panel button:hover{
+    background-color: white;
+    color: var(--var2);
+    border: 3px solid var(--var2);
+}
+
+@media(max-width: 425px){
+    html{
+        font-size: 16px;
+    }
+    .hero-content{
+        width: calc(100% - 2rem); 
+    }
+    .latest-post{
+        min-width: 100%;
+    }
+    .posts-grid{
+        max-width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+    }  
+}
+
+@media(min-width: 425px){
+    html{
+        font-size: 18px;
+    }
+    .hero-content{
+        width: calc(100% - 6rem); 
+    }
+    .latest-posts-container{
+        width: 80%;
+    }
+    .latest-post{
+        min-width: 100%;
+    }
+    .posts-grid{
+        max-width: 80%;
+    }
+}
+@media (max-width:550px) {
+    
+    .latest-post .description{
+        height: 4rem;
+    }
+    .post .description{
+        height: 4rem;
+    }
+}
+@media(min-width: 550px){
+    .latest-posts-container{
+        width: 65%;
+    }
+    .posts-grid{
+        max-width: 65%;
+    }
+    .slider-btn4{
+        display: none;
+    }
+    .latest-post .description{
+        height: 4.5rem;
+    }
+    .post .description{
+        height: 4.5rem;
+    }
+}
+@media(min-width:768px){
+    html{
+        font-size: 20px;
+    }
+    .hero-content{
+        width: calc(100% - 14rem); 
+    }
+    .latest-posts-container{
+        width: 90%;
+    }
+    .latest-post{
+        min-width: calc((100% - 1rem) / 2);
+    }
+    .posts-grid{
+        max-width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(min-width:1024px){
+    html{
+        font-size: 22px;
+    }
+    .slider-btn4, .slider-btn3{
+        display: none;
+    }
+    .hero-content{
+        width: calc(100% - 20rem); 
+    }
+    .latest-post{
+        min-width: calc((100% - 2rem) / 3);
+    }
+    .latest-post .description{
+        height: 4rem;
+    }
+    .posts-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .post .description{
+        height: 4rem;
+    }
+}
+@media(min-width:1440px){
+    html{
+        font-size: 24px;
+    }
+    .latest-post{
+        min-width: calc((100% - 3rem) / 4);
+    }
+    .slider-btns{
+        display: none;
+    }
+    .posts-grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
