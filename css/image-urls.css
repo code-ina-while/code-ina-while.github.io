@@ -1,5 +1,5 @@
 .lt1-img{
-    background-image: url("../assets/html-calculator-thumbnail.png");
+    background-image: url("../assets/swing-calculator-thumbnail.png");
 }
 .lt2-img{
     background-image: url("../assets/lms-spring-boot-thumbnail.png");
@@ -21,4 +21,7 @@
 }
 .post1-4-img{
     background-image: url("../assets/lms-spring-boot-thumbnail.png");
+}
+.post1-5-img{
+    background-image: url("../assets/swing-calculator-thumbnail.png");
 }

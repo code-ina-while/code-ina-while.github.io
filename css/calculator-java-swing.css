@@ -1,0 +1,13 @@
+dl{
+    margin: 1rem auto;
+    width: 90%;
+}
+dd{
+    color: var(--var1);
+    font-size: 1.1rem;
+    margin: 0.3rem 0 0.3rem 1rem;
+} 
+dt{
+    color: var(--var2);
+    font-size: 1.2rem;
+}
