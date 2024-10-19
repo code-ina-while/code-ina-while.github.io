@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive To-Do List using HTML, CSS and JavaScript</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="In this blog, we'll guide you through the process of creating a dynamic to-do list application using HTML, CSS, and JavaScript. This step-by-step tutorial will empower you to build a functional and visually appealing to-do list from scratch.">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.svg">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- text highlighter -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/blog-common.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="logo">
+            <div class="left-brace"></div>
+            <div class="text">
+                <div class="code">Code</div>
+                <div class="in-a">
+                    <div></div>
+                    <div>in a</div>
+                    <div></div>
+                </div>
+                <div class="while">While</div>
+            </div>
+            <div class="right-brace"></div>
+        </a>
+    </header>
+    <main>
+        <section class="title">
+            <h1>Responsive To-Do List using HTML, CSS and JavaScript</h1>
+        </section>
+        <section class="content">
+            <div class="introduction">
+                In this blog, we'll guide you through the process of creating a dynamic to-do list application using HTML, CSS, and JavaScript. Whether you're a coding novice or looking to refine your web development skills, this step-by-step tutorial will empower you to build a functional and visually appealing to-do list from scratch.
+            </div>
+            <section class="advertisement">
+                <h5>Advertisement</h5>
+                <div class="ad"></div>
+            </section>
+            <div class="video">
+                <p>Watch on YouTube</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/E0tH_MMlImQ?si=iTWYZbG3jegRE6MZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                
+            </div>
+            <div class="file">
+                <h3 class="file-name">HTML</h3>
+                                    <pre class="file-content">
+                    <div class="copy">
+                        <span class="material-symbols-outlined">content_copy</span>
+                        <span>copy</span>
+                    </div>
+                        <code class="language-html">&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+    &lttitle&gtTo-do List&lt/title&gt
+
+    &ltlink rel="stylesheet" href="../css/style.css"&gt
+    
+    &ltlink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" /&gt
+&lt/head&gt
+&ltbody&gt
+
+    &ltdiv class="heading"&gt
+        &lth1&gtTo Do List&lt/h1&gt
+    &lt/div&gt
+
+    &ltdiv class="add"&gt
+        &lttextarea id="add-text" name="" placeholder="Add ToDo"&gt&lt/textarea&gt
+        &ltbutton id="add-btn"&gtAdd&lt/button&gt
+    &lt/div&gt
+
+    &ltul class="list"&gt
+
+    &lt/ul&gt
+    
+&lt/body&gt
+&ltscript src="/js/script.js"&gt&lt/script&gt
+&lt/html&gt
+                        </code>
+                    </pre>
+            </div>
+            <div class="file">
+                <h3 class="file-name">CSS</h3>
+                <pre class="file-content">
+                    <div class="copy">
+                        <span class="material-symbols-outlined">content_copy</span>
+                        <span>copy</span>
+                    </div>
+                    <code class="language-css">*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color1: #222433;
+    --color2: #b8a2c9;
+    --color3: #4c3b71;
+    --color4: #c5c3c4;
+}
+
+.heading{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color4);
+}
+h1{
+    font-size: 40px;
+    text-align: center;
+}
+.add{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--color2);
+    padding-bottom: 20px;
+}
+.add textarea{
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 3px solid var(--color2);
+    border-radius: 8px;
+    outline: none;
+    background-color: var(--color3);
+    color: white;
+}
+.add button{
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--color4);
+}
+.list{
+    list-style: none;
+    margin: 30px 0;
+}
+.list-item{
+    width: 90%;
+    height: 70px;
+    border: 3px solid var(--color2);
+    border-radius: 5px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 5px;
+}
+.list-item .checkbox{
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--color2);
+}
+.list-item textarea{
+    height: 40px;
+    border: 2px solid var(--color2);
+    border-radius: 5px;
+    font-size: 16px;
+    flex-grow: 1;
+    background-color: var(--color3);
+    color: white;
+}
+.edit, .delete{
+    color: var(--color4);
+}
+.edit:hover, .delete:hover, .checkbox:hover, #add-btn:hover{
+    cursor: pointer;
+}
+body{
+    background-color: var(--color1);
+}
+@media(min-width: 425px){
+    .heading{
+        height: 100px;
+    }
+    .heading h1{
+        font-size: 45px;
+    }
+    .add{
+        margin-top: 30px;
+        gap: 20px;
+        padding-bottom: 30px;
+    }
+    .add textarea{
+        width: 70%;
+        font-size: 18px;
+    }
+    .add button{
+        height: 35px;
+        font-size: 18px;
+    }
+    .list-item{
+        width: 80%;
+        height: 80px;
+        margin: 30px auto;
+        padding: 0 10px;
+    }
+    .list-item textarea{
+        height: 50px;
+        font-size: 18px;
+    } 
+}
+
+@media(min-width: 768px){
+    .add{
+        flex-direction: row;
+    }
+    .add textarea{
+        width: 50%;
+        font-size: 20px;
+    }
+    .list-item{
+        width: 70%;
+        height: 90px;
+        margin: 40px auto;
+    }
+    .list-item textarea{
+        height: 60px;
+        font-size: 20px;
+    }
+}
+                    </code>
+                </pre>
+            </div>
+            <div class="file">
+                <h3 class="file-name">JavaScript</h3>
+                <pre class="file-content">
+                    <div class="copy">
+                        <span class="material-symbols-outlined">content_copy</span>
+                        <span>copy</span>
+                    </div>
+                    <code class="language-js">// Get references to DOM elements
+let addBtn = document.getElementById("add-btn"); // Button to add a new to-do item
+let addText = document.getElementById("add-text"); // Input field for the to-do text
+let list = document.getElementsByClassName("list")[0]; // The unordered list to display to-do items
+let listItems = document.querySelectorAll(".list-item"); // Initially selected list items
+
+// Create action item when the 'add' button is clicked
+addBtn.addEventListener("click", function() {
+    // Create a new list item element
+    let listItem = document.createElement("li");
+    listItem.className = 'list-item'; // Set class for styling
+    
+    // Populate the list item with a checkbox, textarea, and action buttons
+    listItem.innerHTML = `
+        &ltinput type="checkbox" class="checkbox"&gt &lt!-- Checkbox to mark completion --&gt
+        &lttextarea name="" id="" disabled&gt${addText.value}&lt/textarea&gt &lt!-- Text area for task description --&gt
+        &ltspan class="material-symbols-outlined edit"&gtedit&lt/span&gt &lt!-- Edit button --&gt
+        &ltspan class="material-symbols-outlined delete"&gtdelete&lt/span&gt &lt!-- Delete button --&gt
+    `;
+    
+    // Append the new list item to the list
+    list.appendChild(listItem);
+    attachEventListeners(listItem); // Attach event listeners to the new list item
+});
+
+// Attach event listeners to existing list items
+listItems.forEach(listItem =&gt {
+    attachEventListeners(listItem); // Ensure existing items have the same functionality
+});
+
+// Function to attach event listeners to each list item
+function attachEventListeners(li) {
+    const editBtn = li.querySelector('.edit'); // Select the edit button
+    const deleteBtn = li.querySelector('.delete'); // Select the delete button
+    const textarea = li.querySelector('textarea'); // Select the textarea
+    const checkbox = li.querySelector('.checkbox'); // Select the checkbox
+
+    // Event listener for the edit button
+    editBtn.addEventListener('click', () =&gt {
+        textarea.disabled = false; // Enable editing of the textarea
+        textarea.focus(); // Focus on the textarea for immediate typing
+    });
+
+    // Event listener for when the textarea loses focus
+    textarea.addEventListener('blur', () =&gt {
+        textarea.disabled = true; // Disable editing when focus is lost
+    });
+
+    // Event listener for the delete button
+    deleteBtn.addEventListener('click', () =&gt {
+        li.remove(); // Remove the list item from the DOM
+    });
+
+    // Event listener for the checkbox to mark completion
+    checkbox.addEventListener('change', () =&gt {
+        li.style.opacity = checkbox.checked ? '0.7' : '1'; // Adjust opacity based on completion status
+    });
+}
+                    </code>
+                </pre>
+            </div>
+        </section>
+        <section class="advertisement">
+            <h5>Advertisement</h5>
+            <div class="ad"></div>
+        </section>
+        <section class="bottom-ad"></section>
+    </main>
+    <aside>
+    </aside>
+    <footer></footer>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="../js/blogScript.js"></script>
+</html>
