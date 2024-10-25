@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In and Register form in HTML, CSS and JavaScript</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="This blog is about developing a Log In and Register/Sign up form in HTML, CSS and Javascript.">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.svg">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- text highlighter -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/blog-common.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="logo">
+            <div class="left-brace"></div>
+            <div class="text">
+                <div class="code">Code</div>
+                <div class="in-a">
+                    <div></div>
+                    <div>in a</div>
+                    <div></div>
+                </div>
+                <div class="while">While</div>
+            </div>
+            <div class="right-brace"></div>
+        </a>
+    </header>
+    <main>
+        <section class="title">
+            <h1>Crafting a Login and Registration Form with HTML, CSS, and JavaScript</h1>
+        </section>
+        <section class="content">
+            <div class="introduction">
+                In this blog post, we'll dive into the essentials of crafting a seamless login and registration experience using HTML, CSS, and JavaScript. Get ready to elevate your web development skills and create forms that not only function beautifully but also captivate users at first glance!
+            </div>
+            <section class="advertisement">
+                <h5>Advertisement</h5>
+                <div class="ad"></div>
+            </section>
+            <div class="video">
+                <p>Watch on YouTube</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qODt4rjcaYc?si=2b4MM27ZtYt7VoII" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                
+            </div>
+            <div class="file">
+                <h3 class="file-name">HTML</h3>
+                                    <pre class="file-content">
+                    <div class="copy">
+                        <span class="material-symbols-outlined">content_copy</span>
+                        <span>copy</span>
+                    </div>
+                        <code class="language-html">&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+    &lttitle&gtRegister & LogIn&lt/title&gt
+
+    &ltlink rel="stylesheet" href="../css/style.css"&gt
+
+    &ltlink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&" /&gt
+&lt/head&gt
+&ltbody&gt
+    &ltdiv class="container"&gt
+        &ltdiv class="login-container"&gt
+            &lth1&gtLog In&lt/h1&gt
+            &ltform action="" id="login-form"&gt
+                &ltfieldset&gt
+                    &ltinput type="text" name="user-name" required&gt
+                    &ltlabel for="user-name"&gtUserName&lt/label&gt
+                    &ltspan class="material-symbols-outlined"&gt person &lt/span&gt
+                &lt/fieldset&gt
+                &ltfieldset&gt
+                    &ltinput type="password" name="password" required&gt
+                    &ltlabel for="password"&gtPassword&lt/label&gt
+                    &ltspan class="material-symbols-outlined"&gt lock &lt/span&gt
+                &lt/fieldset&gt
+                &ltbutton id="login-btn"&gtLog In&lt/button&gt
+            &lt/form&gt
+            &ltdiv class="call-container"&gt
+                &ltp&gtDon't have an account&lt/p&gt
+                &ltbutton id="register-call-btn"&gtRegister&lt/button&gt
+            &lt/div&gt
+        &lt/div&gt
+        &ltdiv class="register-container"&gt
+            &lth1&gtRegister&lt/h1&gt
+            &ltform action="" id="register-form"&gt
+                &ltfieldset&gt
+                    &ltinput type="email" name="email" required&gt
+                    &ltlabel for="email"&gtEmail&lt/label&gt
+                    &ltspan class="material-symbols-outlined"&gt mail &lt/span&gt
+                &lt/fieldset&gt
+                &ltfieldset&gt
+                    &ltinput type="text" name="user-name" required&gt
+                    &ltlabel for="user-name"&gtUserName&lt/label&gt
+                    &ltspan class="material-symbols-outlined"&gt person &lt/span&gt
+                &lt/fieldset&gt
+                &ltfieldset&gt
+                    &ltinput type="password" name="password" required&gt
+                    &ltlabel for="password"&gtPassword&lt/label&gt
+                    &ltspan class="material-symbols-outlined"&gt lock &lt/span&gt
+                &lt/fieldset&gt
+                &ltbutton id="register-btn"&gtRegister&lt/button&gt
+            &lt/form&gt
+            &ltdiv class="call-container"&gt
+                &ltp&gtDon't have an account&lt/p&gt
+                &ltbutton id="login-call-btn"&gtLog In&lt/button&gt
+            &lt/div&gt
+        &lt/div&gt
+    &lt/div&gt
+&lt/body&gt
+
+&ltscript src="../js/script.js"&gt&lt/script&gt
+&lt/html&gt
+                        </code>
+                    </pre>
+            </div>
+            <div class="file">
+                <h3 class="file-name">CSS</h3>
+                <pre class="file-content">
+                    <div class="copy">
+                        <span class="material-symbols-outlined">content_copy</span>
+                        <span>copy</span>
+                    </div>
+                    <code class="language-css">
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root{
+    --color1: #f8f6ff;
+    --color2: #76dc95;
+    --color3:#ff7473;
+    --color4: #393c40;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color4);
+}
+.container{
+    width: 450px;
+    height: 550px;
+    border: 2px solid var(--color1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0px var(--color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    transition: 2s;
+    transform-style: preserve-3d;
+}
+h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--color3);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+form fieldset{
+    position: relative;
+    border: none;
+    padding: 10px;
+}
+form fieldset label{
+    position: absolute;
+    left: 10px;
+    top: 25px;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: var(--color1);
+}
+form fieldset span{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    color: var(--color1);
+    transition: 0.5s ease-in-out;
+}
+form input{
+    width: 300px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--color1);
+    background-color: transparent;
+    font-size: 16px;
+    padding: 15px 20px 0px 0;
+    color: var(--color2);
+    transition: 0.5s ease-in-out;
+}
+
+fieldset input:focus~label,
+fieldset input:valid~label{
+    top: 0px;
+    color: var(--color2);
+}
+
+fieldset input:focus~span,
+fieldset input:valid~span{
+    color: var(--color2);
+}
+
+fieldset input:focus,
+fieldset input:valid{
+    border-bottom: 2px solid var(--color2);
+}
+
+button{
+    width: 300px;
+    height: 40px;
+    outline: none;
+    border: 2px solid var(--color1);
+    border-radius: 50px;
+    font-size: 20px;
+    color: var(--color1);
+    background-color: var(--color3);
+    transition: 0.5s ease-in-out;
+}
+#login-btn, #register-btn{
+    margin-top: 30px;
+}
+button:hover{
+    background-color: transparent;
+}
+.call-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+.call-container p{
+    font-size: 16px;
+    color: var(--color1);
+}
+
+.register-container, .login-container{
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.register-container{
+    transform: rotateY(180deg);
+}
+                    </code>
+                </pre>
+            </div>
+            <div class="file">
+                <h3 class="file-name">JavaScript</h3>
+                <pre class="file-content">
+                    <div class="copy">
+                        <span class="material-symbols-outlined">content_copy</span>
+                        <span>copy</span>
+                    </div>
+                    <code class="language-js">let container = document.querySelector('.container');
+let registerCallBtn = document.querySelector("#register-call-btn");
+let loginCallBtn = document.querySelector("#login-call-btn");
+
+registerCallBtn.addEventListener('click', ()=&gt {
+    container.style.transform = 'rotateY(180deg)';
+});
+
+loginCallBtn.addEventListener('click', ()=&gt {
+    container.style.transform = 'rotateY(0deg)';
+});
+                    </code>
+                </pre>
+            </div>
+        </section>
+        <section class="advertisement">
+            <h5>Advertisement</h5>
+            <div class="ad"></div>
+        </section>
+        <section class="bottom-ad"></section>
+    </main>
+    <aside>
+    </aside>
+    <footer></footer>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="../js/blogScript.js"></script>
+</html>

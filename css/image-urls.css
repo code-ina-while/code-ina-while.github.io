@@ -1,14 +1,14 @@
 .lt1-img{
-    background-image: url("../assets/todo-list-html-thumbnail.png");
+    background-image: url("../assets/login-reg-thumbnail.png");
 }
 .lt2-img{
-    background-image: url("../assets/swing-calculator-thumbnail.png");
+    background-image: url("../assets/todo-list-html-thumbnail.png");
 }
 .lt3-img{
-    background-image: url("../assets/lms-spring-boot-thumbnail.png");
+    background-image: url("../assets/swing-calculator-thumbnail.png");
 }
 .lt4-img{
-    background-image: url("../assets/swing-login-thumbnail.png");
+    background-image: url("../assets/lms-spring-boot-thumbnail.png");
 }
 .post1-1-img{
     background-image: url("../assets/html-login-thumbnail.png");
@@ -27,4 +27,7 @@
 }
 .post1-6-img{
     background-image: url("../assets/todo-list-html-thumbnail.png");
+}
+.post1-7-img{
+    background-image: url("../assets/login-reg-thumbnail.png");
 }
